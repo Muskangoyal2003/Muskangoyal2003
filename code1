@@ -1,0 +1,18 @@
+#include<limits.h>
+struct pair getMinMax(long long int arr[], long long int n) {
+   long long int maxi = INT_MIN;
+   long long int mini = INT_MAX;
+   for(int i=0;i<n;i++){
+       if (arr[i]>maxi){
+           maxi = arr[i];
+       }
+          if(arr[i]<mini){
+          mini = arr[i];
+            }
+   }
+   
+   struct pair m;
+   m.min= mini;
+   m.max = maxi;
+   return m;
+}
